@@ -3,9 +3,9 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import { Backend_Url } from "../config";
 export interface Blog {
-  id: string;
-  title: string;
-  content: string;
+  id: string,
+  title: string,
+  content: string,
   author:{
     name:string
   }
@@ -14,7 +14,7 @@ export interface Blog {
 export const useBlog= ({id}: {id:string}) =>{
   const [loading,setLoading] = useState(true);
   
-  const [blog,setBlog]= useState<Blog[]>([]);
+  const [blog,setBlog]= useState<Blog>();
   
     useEffect(()=>{
     axios.get(`${Backend_Url}/api/v1/blog/${id}`,{
