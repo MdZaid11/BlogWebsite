@@ -32,7 +32,8 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
         <div className="flex justify-center">
             <div>
                 <div className="px-10">
-                    <div className="text-3xl font-extrabold">
+                    <div className="text-3xl font-extrabold">Welcome to Medium!</div>
+                    <div className="text-3xl mt-2 font-extrabold">
                         Create an account
                     </div>
                     <div className="text-slate-500">
@@ -44,19 +45,19 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
                     </div>
                 </div>
                 <div className="pt-8">
-                    {type === "signup" ? <LabelledInput label="Name" placeholder="Harkirat Singh..." onChange={(e) => {
+                    {type === "signup" ? <LabelledInput label="Name" placeholder="Md Zaid..." onChange={(e) => {
                         setPostInputs({
                             ...postInputs,
                             name: e.target.value
                         })
                     }} /> : null}
-                    <LabelledInput label="Username" placeholder="harkirat@gmail.com" onChange={(e) => {
+                    <LabelledInput label="Username" placeholder="xyz123@gmail.com" onChange={(e) => {
                         setPostInputs({
                             ...postInputs,
                             email: e.target.value
                         })
                     }} />
-                    <LabelledInput label="Password" type={"password"} placeholder="123456" onChange={(e) => {
+                    <LabelledInput label="Password" type={"password"} placeholder="Xyz@123" onChange={(e) => {
                         setPostInputs({
                             ...postInputs,
                             password: e.target.value
